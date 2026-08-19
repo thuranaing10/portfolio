@@ -39,7 +39,7 @@ const skills = [
 
 const experiences = [
   {
-    company: "U9 Co., Ltd",
+    company: "Nine Communication Co., Ltd (U9)",
     note: "formerly Ooredoo Myanmar",
     role: "Senior Software Development Engineer",
     period: "Sep 2024 - Present",
@@ -117,15 +117,15 @@ export default function Home() {
         <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 content-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
           <div className="flex flex-col justify-center">
             <p className="mb-5 w-fit border border-[#c9d6d2] bg-[#eff7f5] px-3 py-1 text-sm font-semibold uppercase text-[#186455]">
-              Full Stack Web Developer
+              Senior Software Engineer
             </p>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] text-[#101817] sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.04] text-[#101817]">
               I build reliable web platforms for business operations.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#4c5a57] sm:text-xl">
               Senior Software Engineer with 6+ years of experience delivering scalable
-              system like E-commerce, POS, LMS, CMS, Logistics, Telecom, VPN, and
-              real-time application systems.
+              systems like E-commerce, POS, LMS, CMS, Logistics, Telecom, VPN, and
+              real-time applications.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
