@@ -39,7 +39,7 @@ const skills = [
 
 const experiences = [
   {
-    company: "Nine Communication Co., Ltd (U9)",
+    company: "Nine Communications Co., Ltd (U9)",
     note: "formerly Ooredoo Myanmar",
     role: "Senior Software Development Engineer",
     period: "Sep 2024 - Present",
@@ -91,17 +91,50 @@ const experiences = [
 ];
 
 const projects = [
-  "U9 SIM Swap Operation Portal",
-  "U9 ESIM Operation Portal",
-  "MGL Express Myanmar",
-  "Medical Insurance Claim Operation Portal",
-  "ABC Browser + VPN",
-  "BusyBees Myanmar",
-  "Queuing Management System",
-  "Lottery Game",
-  "Akoneya Life Style App",
-  "Learn Myanmar",
-  "Bus Ticket System",
+  {
+    title: "U9 SIM Swap Operation Portal",
+    image: "/projects/u9-sim-swap.png",
+  },
+  {
+    title: "U9 ESIM Operation Portal",
+    image: "/projects/u9-esim.png",
+  },
+  {
+    title: "MGL Express Myanmar",
+    image: "/projects/mgl-express.png",
+  },
+  {
+    title: "Medical Insurance Claim Operation Portal",
+    image: "/projects/medical-insurance.png",
+  },
+  {
+    title: "ABC Browser + VPN",
+    image: "/projects/abc-vpn.png",
+  },
+  {
+    title: "BusyBees Myanmar",
+    image: "/projects/busybees.png",
+  },
+  {
+    title: "Queuing Management System",
+    image: "/projects/queuing-management.png",
+  },
+  {
+    title: "Lottery Game",
+    image: "/projects/lottery-game.png",
+  },
+  {
+    title: "Akoneya Life Style App",
+    image: "/projects/akoneya-lifestyle.png",
+  },
+  {
+    title: "Learn Myanmar",
+    image: "/projects/learn-myanmar.png",
+  },
+  {
+    title: "Bus Ticket System",
+    image: "/projects/bus-ticket.png",
+  },
 ];
 
 const stats = [
@@ -117,7 +150,7 @@ export default function Home() {
         <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 content-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
           <div className="flex flex-col justify-center">
             <p className="mb-5 w-fit border border-[#c9d6d2] bg-[#eff7f5] px-3 py-1 text-sm font-semibold uppercase text-[#186455]">
-              Senior Software Engineer
+              Senior Software Engineer | AI-Native Software Engineer
             </p>
             <h1 className="max-w-4xl text-4xl font-semibold leading-[1.04] text-[#101817]">
               I build reliable web platforms for business operations.
@@ -274,13 +307,24 @@ export default function Home() {
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <article
-                key={project}
-                className="border border-[#d8d8ce] bg-white p-5 transition hover:border-[#186455]"
+                key={project.title}
+                className="group overflow-hidden border border-[#d8d8ce] bg-white transition hover:border-[#186455] hover:shadow-[0_18px_45px_rgba(23,32,31,0.12)]"
               >
-                <p className="text-sm font-semibold text-[#b35d2a]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-4 text-xl font-semibold leading-7 text-[#17201f]">{project}</h3>
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project illustration`}
+                  width={1200}
+                  height={760}
+                  className="aspect-[30/19] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="p-5">
+                  <p className="text-sm font-semibold text-[#b35d2a]">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-4 text-xl font-semibold leading-7 text-[#17201f]">
+                    {project.title}
+                  </h3>
+                </div>
               </article>
             ))}
           </div>
@@ -314,7 +358,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-[#174f45]">Contact</p>
             <h2 className="mt-3 text-4xl font-semibold leading-tight text-[#101817]">
-              Need a developer who can own the full path from interface to deployment?
+              Need a software engineer who can own the full path from interface to deployment?
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
